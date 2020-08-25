@@ -1,0 +1,72 @@
+{
+  "name": "pikasandbox",
+  "private": true,
+  "description": "An online front-end code sandbox based on bundless",
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [
+    "sandbox",
+    "bundless"
+  ],
+  "author": "Jialiang T. (rememhe@outlook.com)",
+  "license": "MIT",
+  "scripts": {},
+  "bugs": {
+    "url": "https://github.com/Zousdie/pikasandbox/issues"
+  },
+  "homepage": "https://github.com/Zousdie/pikasandbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zousdie/pikasandbox.git"
+  },
+  "engines": {
+    "node": ">=10.16.0",
+    "yarn": ">=1.22.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "cache-loader": "^4.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.2.2",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
+    "mini-css-extract-plugin": "^0.10.0",
+    "postcss": "^7.0.32",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.1.1",
+    "thread-loader": "^2.1.3",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "prettier --write",
+      "cross-env NODE_ENV='production' eslint --fix",
+      "git add"
+    ]
+  }
+}
