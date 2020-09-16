@@ -1,0 +1,27 @@
+{
+  "name": "@pikasandbox/frame",
+  "private": true,
+  "version": "0.0.1",
+  "description": "pikasandbox app iframe runtime",
+  "keywords": [
+    "sandbox",
+    "bundleless"
+  ],
+  "author": "Jialiang T. <rememhe@outlook.com>",
+  "homepage": "https://github.com/Zousdie/pikasandbox/tree/master/packages/frame#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zousdie/pikasandbox.git"
+  },
+  "scripts": {
+    "dev": "rollup -c build/rollup.config.js --environment NODE_ENV:development --watch",
+    "build": "rollup -c build/rollup.config.js --environment NODE_ENV:production",
+    "clean": "rimraf dist",
+    "predev": "rimraf dist",
+    "prebuild": "rimraf dist"
+  },
+  "bugs": {
+    "url": "https://github.com/Zousdie/pikasandbox/issues"
+  }
+}
